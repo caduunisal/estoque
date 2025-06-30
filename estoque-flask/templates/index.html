@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estoque</title>
+</head>
+<body>
+    <h1>Controle de Estoque</h1>
+    <form action="/add" method="post">
+        Nome: <input name="nome"><br>
+        Quantidade: <input name="quantidade"><br>
+        <button type="submit">Adicionar</button>
+    </form>
+    <ul>
+        {% for produto in produtos %}
+            <li>{{ produto.nome }} - {{ produto.quantidade }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
